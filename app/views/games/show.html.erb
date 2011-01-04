@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @game.date %>
+</p>
+
+<p>
+  <b>Against:</b>
+  <%= @game.against %>
+</p>
+
+<p>
+  <b>Tufc goals:</b>
+  <%= @game.tufc_goals %>
+</p>
+
+<p>
+  <b>Against goals:</b>
+  <%= @game.against_goals %>
+</p>
+
+<p>
+  <b>Home:</b>
+  <%= @game.home %>
+</p>
+
+<p>
+  <b>League game:</b>
+  <%= @game.league_game %>
+</p>
+
+<p>
+  <b>Playoff game:</b>
+  <%= @game.playoff_game %>
+</p>
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

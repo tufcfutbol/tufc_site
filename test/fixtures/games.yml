@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2011-01-04 13:08:38
+  against: MyString
+  tufc_goals: 1
+  against_goals: 1
+  home: false
+  league_game: false
+  playoff_game: false
+
+two:
+  date: 2011-01-04 13:08:38
+  against: MyString
+  tufc_goals: 1
+  against_goals: 1
+  home: false
+  league_game: false
+  playoff_game: false

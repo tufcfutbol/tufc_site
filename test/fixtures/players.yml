@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_team: false
+  preffered_position: MyString
+  rating: 1
+  hometown: MyString
+  notes: MyText
+  first_name: MyString
+  last_name: MyString
+  year: 1
+
+two:
+  first_team: false
+  preffered_position: MyString
+  rating: 1
+  hometown: MyString
+  notes: MyText
+  first_name: MyString
+  last_name: MyString
+  year: 1

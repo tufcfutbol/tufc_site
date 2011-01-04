@@ -1,0 +1,11 @@
+p/**/*
+g/*.log
+*.log
+tmp/**/*
+tmp/*
+doc/api
+doc/app
+*.swp
+*~
+.DS_Store
+

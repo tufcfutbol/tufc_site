@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  player_id: 1
+  season: MyString
+  year: 1
+  goals: 1
+  assists: 1
+  yellow_cards: 1
+  red_cards: 1
+  games_played: 1
+  eboard_position: MyString
+
+two:
+  player_id: 1
+  season: MyString
+  year: 1
+  goals: 1
+  assists: 1
+  yellow_cards: 1
+  red_cards: 1
+  games_played: 1
+  eboard_position: MyString

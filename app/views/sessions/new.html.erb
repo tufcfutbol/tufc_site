@@ -6,7 +6,10 @@
 <%= form_for(:session, :url => sessions_path) do |f| %>
 <%= f.text_field :username, :id => 'login-email', :class => 'jq_watermark login-inputs', :title => 'Username' %>
 <%= f.password_field :password, :id => 'login-password', :class => 'jq_watermark login-inputs', :title => 'Password' %>
-<hr class="space" />
+<br />
+<p>
+Cookies must be enabled for this website to work properly.
+</p>
 <%= f.submit 'Sign In', :id => 'login-submit' %>
 <% end %>
 </div>

@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: newsletters
+#
+#  id          :integer         not null, primary key
+#  entry       :text
+#  authored_by :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
@@ -7,3 +18,4 @@ one:
 two:
   entry: MyText
   authored_by: 1
+

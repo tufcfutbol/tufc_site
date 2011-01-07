@@ -1,0 +1,13 @@
+<head>
+<%= javascript_include_tag 'jquery.watermark.min.js' %>
+</head>
+<div class="prepend-8 span-8 append-8 last" id="signin-wrapper">
+<h1> E-Board Sign In </h1>
+<%= form_for(:session, :url => sessions_path) do |f| %>
+<%= f.text_field :username, :id => 'login-email', :class => 'jq_watermark login-inputs', :title => 'Username' %>
+<%= f.password_field :password, :id => 'login-password', :class => 'jq_watermark login-inputs', :title => 'Password' %>
+<hr class="space" />
+<%= f.submit 'Sign In', :id => 'login-submit' %>
+<% end %>
+</div>
+

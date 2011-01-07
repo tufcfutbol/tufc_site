@@ -28,6 +28,7 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
+    annotate (2.4.0)
     arel (2.0.6)
     builder (2.1.2)
     configuration (1.2.0)
@@ -83,6 +84,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
   heroku
   jquery-rails
   rails (= 3.0.3)

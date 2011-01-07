@@ -1,13 +1,25 @@
 TufcSite::Application.routes.draw do
+
+  root :to => 'pages#home'
+
   resources :subscribers
 
   resources :games
 
   resources :newsletters
 
-  resources :stats
+  resources :players do
+    resources :stats
+  end
 
-  resources :players
+  match '/about', :to => 'pages#about'
+  match '/contact', :to => 'contact_mailer#index'
+  match '/sendmail', :to => 'contact_mailer#sendmail'
+
+  resources :sessions, :only => [:new, :create, :destroy]
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -66,3 +78,4 @@ TufcSite::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+

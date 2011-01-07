@@ -1,0 +1,14 @@
+#footer-wrapper{
+    border-bottom-right-radius:1.5em;
+    border-bottom-left-radius:1.5em;
+    background-color:#14B1FF;
+}
+
+#facebook-link{
+    margin:1em;
+}
+
+#site-links{
+    align:right;
+}
+

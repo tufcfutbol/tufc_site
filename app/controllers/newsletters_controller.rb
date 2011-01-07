@@ -3,33 +3,18 @@ class NewslettersController < ApplicationController
   # GET /newsletters.xml
   def index
     @newsletters = Newsletter.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @newsletters }
-    end
   end
 
   # GET /newsletters/1
   # GET /newsletters/1.xml
   def show
     @newsletter = Newsletter.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @newsletter }
-    end
   end
 
   # GET /newsletters/new
   # GET /newsletters/new.xml
   def new
     @newsletter = Newsletter.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @newsletter }
-    end
   end
 
   # GET /newsletters/1/edit
@@ -40,16 +25,14 @@ class NewslettersController < ApplicationController
   # POST /newsletters
   # POST /newsletters.xml
   def create
+    raise params.inspect
     @newsletter = Newsletter.new(params[:newsletter])
-
-    respond_to do |format|
-      if @newsletter.save
-        format.html { redirect_to(@newsletter, :notice => 'Newsletter was successfully created.') }
-        format.xml  { render :xml => @newsletter, :status => :created, :location => @newsletter }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @newsletter.errors, :status => :unprocessable_entity }
-      end
+    if @newsletter.save
+      flash[:success] = 'Newsletter Successfully created'
+      redirect_to newsletters_path(@newsletter.id)
+    else
+      flash[:error] = 'There was a problem creating your newsletter.'
+      redirect_to new_newsletters_path
     end
   end
 
@@ -58,15 +41,6 @@ class NewslettersController < ApplicationController
   def update
     @newsletter = Newsletter.find(params[:id])
 
-    respond_to do |format|
-      if @newsletter.update_attributes(params[:newsletter])
-        format.html { redirect_to(@newsletter, :notice => 'Newsletter was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @newsletter.errors, :status => :unprocessable_entity }
-      end
-    end
   end
 
   # DELETE /newsletters/1
@@ -74,10 +48,6 @@ class NewslettersController < ApplicationController
   def destroy
     @newsletter = Newsletter.find(params[:id])
     @newsletter.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(newsletters_url) }
-      format.xml  { head :ok }
-    end
   end
 end
+

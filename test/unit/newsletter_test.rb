@@ -4,9 +4,9 @@
 #
 #  id          :integer         not null, primary key
 #  entry       :text
-#  authored_by :integer
 #  created_at  :datetime
 #  updated_at  :datetime
+#  authored_by :string(255)
 #
 
 require 'test_helper'

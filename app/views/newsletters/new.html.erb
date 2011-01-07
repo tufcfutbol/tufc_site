@@ -1,0 +1,8 @@
+<div class="prepend-8 span-8 append-8 last">
+<%= form_for :newsletters do |f| %>
+  <%= f.text_area :entry, :class => 'jq_watermark', :title => 'Newsletter Entry' %><hr class="space" />
+  <%= f.text_field :authored_by, :class => 'jq_watermark',:title => 'Your Name' %><hr class="space" />
+  <%= f.submit 'Create Entry' %>
+<% end %>
+</div>
+

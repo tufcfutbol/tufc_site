@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110104211120) do
+ActiveRecord::Schema.define(:version => 20110107221643) do
 
   create_table "games", :force => true do |t|
     t.datetime "date"
@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(:version => 20110104211120) do
 
   create_table "newsletters", :force => true do |t|
     t.text     "entry"
-    t.integer  "authored_by"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "authored_by"
   end
 
   create_table "players", :force => true do |t|

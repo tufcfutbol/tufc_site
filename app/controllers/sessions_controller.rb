@@ -20,6 +20,12 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    sign_out
+    flash[:notice] = 'You have been signed out!'
+    redirect_to root_path
+  end
+
 private
 
   def authenticate(key)

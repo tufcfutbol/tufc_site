@@ -30,5 +30,6 @@ class SubscribersController < ApplicationController
       flash[:error]= 'Your email has not been removed from the list. Please try again or contact us.'
       redirect_to root_path
     end
+  end
 end
 

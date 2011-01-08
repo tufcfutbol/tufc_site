@@ -9,6 +9,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'jquery-rails'
 gem 'heroku'
 gem 'annotate'
+gem 'bluecloth'
+gem 'will_paginate'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -32,3 +34,4 @@ gem 'annotate'
 # group :development, :test do
 #   gem 'webrat'
 # end
+

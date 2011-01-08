@@ -23,6 +23,14 @@ module SessionsHelper
     verified= false
   end
 
+  def authenticate
+    deny_access unless signed_in?
+  end
+
+  def deny_access
+    redirect_to '/signin', :notice =>"Please sign in to access this page."
+  end
+
 private
 
   def remember_token

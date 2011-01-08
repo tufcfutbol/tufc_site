@@ -1,0 +1,13 @@
+<% if (newsletter.id == Newsletter.last.id)%>
+<% else %>
+<hr>
+<% end %>
+<h1><%= newsletter.updated_at.strftime('Created on %b %d,%Y') %></h1>
+<%= raw(BlueCloth.new(newsletter.entry).to_html) %> <hr class="space" />
+Authored By:<%= newsletter.authored_by %>
+<% if signed_in? %>
+<hr class="space" />
+<%= link_to 'Edit This Entry', edit_newsletter_path(newsletter.id) %><br />
+<%= link_to 'Delete This Entry', newsletter_path(newsletter.id), :method => :delete %>
+<% end %>
+

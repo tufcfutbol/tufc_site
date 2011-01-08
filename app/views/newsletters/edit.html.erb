@@ -1,11 +1,11 @@
-<div class="prepend-2 span-14 append-8 last">
+<div class="prepend-8 span-8 append-8 last">
 <%= form_for @newsletter do |f| %>
   <%= f.text_area :entry, :class => 'jq_watermark', :title => 'Newsletter Entry' %>
   <br />
   This box accepts <%= link_to 'Markdown', 'http://en.wikipedia.org/wiki/Markdown' %>.
   <hr class="space" />
   <%= f.text_field :authored_by, :class => 'jq_watermark',:title => 'Your Name' %><hr class="space" />
-  <%= f.submit 'Create Entry' %>
+  <%= f.submit 'Edit Entry' %>
 <% end %>
 </div>
 

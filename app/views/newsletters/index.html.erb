@@ -1,0 +1,10 @@
+<div class="prepend-4 span-16 append-4 last">
+<%= render @newsletters %><br />
+<div class="prepend-6 span-7" id="paginate-information">
+<hr class="space" />
+<hr class="space" />
+<%= will_paginate @newsletters %>
+<%= raw(page_entries_info @newsletters) %>
+</div>
+</div>
+

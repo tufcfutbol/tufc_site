@@ -5,7 +5,6 @@ TufcSite::Application.routes.draw do
   resources :subscribers
 
   resources :games
-
   resources :newsletters
 
   resources :players do

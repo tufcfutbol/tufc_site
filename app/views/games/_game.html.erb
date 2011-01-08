@@ -1,0 +1,13 @@
+<td><%= game.date.strftime('%b %d,%Y') %></td>
+<%if signed_in? %>
+<td><%= link_to game.against, game_path(game.id) %></td>
+<% else %>
+<td><%= game.against %></td>
+<% end %>
+<td><%= game.tufc_goals %></td>
+<td><%= game.against_goals %></td>
+<td><%= normalize(game.home) %></td>
+<td><%= normalize(game.league_game) %></td>
+<td><%= normalize(game.playoff_game) %></td>
+<td><%= win_or_loss(game) %></td>
+

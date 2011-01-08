@@ -1,0 +1,23 @@
+<div class="prepend-1 span-23">
+    <h2>Drop me a message, and I'll be sure to respond ASAP!</h2>
+    <strong>Thanks to the power of Android, when I have cell phone service I have email
+        -- so I should get your message in a timely fashion.</strong>
+    <br/>
+    <hr class="space" />Now whether I choose to respond to it... just kidding,
+    but seriously if you want to know anything, don't be shy. The form is short.
+    <%= form_for :email, :url => {:action => 'sendmail'} do |f| %>
+    <br/>
+    Subject
+    <br/>
+    <%= f.text_field :subject, :value => @subject %>
+    <br/>
+    Message
+    <br/>
+    <%= f.text_area :message, :value => @message %>
+    <br/>
+    <strong> Be sure to leave your contact information in the message if you would like a response!</strong>
+    <br/>
+    <%= f.submit 'Send', :confirm => 'Don\'t forget your contact information. If you didn\'t, then click OK' %>
+    <% end %>
+</div>
+

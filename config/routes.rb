@@ -2,7 +2,7 @@ TufcSite::Application.routes.draw do
 
   root :to => 'pages#home'
 
-  resources :subscribers => :only =>[:new,:create,:destroy]
+  resources :subscribers, :only =>[:new,:create,:destroy]
 
   resources :games
   resources :newsletters

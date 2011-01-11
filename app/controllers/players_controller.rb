@@ -3,33 +3,18 @@ class PlayersController < ApplicationController
   # GET /players.xml
   def index
     @players = Player.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @players }
-    end
   end
 
   # GET /players/1
   # GET /players/1.xml
   def show
     @player = Player.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @player }
-    end
   end
 
   # GET /players/new
   # GET /players/new.xml
   def new
     @player = Player.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @player }
-    end
   end
 
   # GET /players/1/edit
@@ -41,15 +26,10 @@ class PlayersController < ApplicationController
   # POST /players.xml
   def create
     @player = Player.new(params[:player])
-
-    respond_to do |format|
-      if @player.save
-        format.html { redirect_to(@player, :notice => 'Player was successfully created.') }
-        format.xml  { render :xml => @player, :status => :created, :location => @player }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @player.errors, :status => :unprocessable_entity }
-      end
+    if @player.save
+      redirect_to @player, :flash => {:success => 'Player creation successful'}
+    else
+      render 'new'
     end
   end
 
@@ -57,16 +37,6 @@ class PlayersController < ApplicationController
   # PUT /players/1.xml
   def update
     @player = Player.find(params[:id])
-
-    respond_to do |format|
-      if @player.update_attributes(params[:player])
-        format.html { redirect_to(@player, :notice => 'Player was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @player.errors, :status => :unprocessable_entity }
-      end
-    end
   end
 
   # DELETE /players/1
@@ -74,10 +44,6 @@ class PlayersController < ApplicationController
   def destroy
     @player = Player.find(params[:id])
     @player.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(players_url) }
-      format.xml  { head :ok }
-    end
   end
 end
+

@@ -1,3 +1,13 @@
+require 'test_helper'
+
+class PlayerTest < ActiveSupport::TestCase
+  # Replace this with your real tests.
+  test "the truth" do
+    assert true
+  end
+end
+
+
 # == Schema Information
 #
 # Table name: players
@@ -13,14 +23,6 @@
 #  year               :integer
 #  created_at         :datetime
 #  updated_at         :datetime
+#  email              :string(255)
 #
-
-require 'test_helper'
-
-class PlayerTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
-end
 

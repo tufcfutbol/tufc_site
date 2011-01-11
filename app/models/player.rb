@@ -13,10 +13,21 @@
 #  year               :integer
 #  created_at         :datetime
 #  updated_at         :datetime
+#  email              :string(255)
 #
 
 class Player < ActiveRecord::Base
   has_many :stats, :dependent => :destroy
+
+  validates :first_name, :presence => true, :length => {:maximum => 50}
+  validates :last_name, :presence => true
+  validates :email, :presence => true, :format => {:with => /^([^\s]+)((?:[-a-z0-9]\.)[a-z]{2,})$/i}, :uniqueness => {:case_sensitive => false}
+  validates :year, :presence => true
+  validates :first_team, :presence => true
+  validates_numericality_of :year, :greater_than => 1950, :less_than => 2100
+
+
+
 
 
 end

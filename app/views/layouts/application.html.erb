@@ -8,10 +8,10 @@
         <%= yield(:head) %>
 </head>
 <body>
-<div class="container" id="container">
+<div class="container showgrid" id="container">
 <%= render 'shared/header' %>
 <hr class="space" />
-<%= render 'shared/error_messages' %><br />
+<%= render 'shared/flash_messages' %><br />
 <%= yield %>
 <hr class="space" />
 <%= render 'shared/footer' %>

@@ -1,0 +1,24 @@
+<h1>Player View </h1>
+<hr class="space" />
+<div id="header-info" class="prepend-1 span-12 append-1 last">
+<span class="loud large"><%= header_name @player %></span>
+<hr class="space" />
+<span class="loud">Hometown:
+<%= hometown @player %>
+</span>
+<hr class="space" />
+<span class="quiet">Notes:
+<%= hometown @player %>
+</span>
+</div>
+
+<div id="player-info" class="prepend-1 span-8 append-1 last">
+<%= preffered_position @player %><hr class="space"  />
+<%= rating @player %><hr class="space" />
+<%= first_team @player %><hr class="space" />
+</div>
+
+<hr class="space" />
+
+<h1> Stats for <%= @player.first_name + ' ' + @player.last_name%></h1>
+

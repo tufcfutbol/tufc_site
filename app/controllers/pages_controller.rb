@@ -4,5 +4,9 @@ class PagesController < ApplicationController
     @title = 'TUFC | Home'
   end
 
+  def construction
+    render :layout => false
+  end
+
 end
 

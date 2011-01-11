@@ -1,6 +1,10 @@
 TufcSite::Application.routes.draw do
 
-  root :to => 'pages#home'
+  #While under construction, route to construction page
+
+  root :to => 'pages#construction'
+
+  #root :to => 'pages#home'
 
   resources :subscribers, :only =>[:new,:create,:destroy]
 

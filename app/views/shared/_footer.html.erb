@@ -3,7 +3,7 @@
 </head>
 
 <div class="span-24 last" id="footer-wrapper">
-<div class="prepend-1 span-8" id="facebook-links">
+<div class="prepend-1 span-8 column" id="facebook-links">
 <%= link_to image_tag('facebook_32.png'), 'http://www.facebook.com/pages/TUFC-Venom/86854084508', :target => '_blank',:align => 'center' %>
 <br />
 Designed and Programmed by <%= link_to 'Taylor Perkins', 'http://hwrdprkns.com', :target => '_blank' %><br /> ©<%= Time.now.year %>
@@ -11,7 +11,7 @@ Designed and Programmed by <%= link_to 'Taylor Perkins', 'http://hwrdprkns.com',
 
 
 <% if signed_in? %>
-<div class="prepend-5 span-9 apprend-1 last" id="site-links">
+<div class="prepend-5 span-9 apprend-1 last column" id="site-links">
 <%= link_to 'Sitemap', root_path %>
 <%= link_to 'Create Player', new_player_path %>
 <%= link_to 'Create Game', new_game_path %>
@@ -19,7 +19,7 @@ Designed and Programmed by <%= link_to 'Taylor Perkins', 'http://hwrdprkns.com',
 <%= link_to 'Sign Out', '/signout' %>
 </div>
 <% else %>
-<div class="prepend-17 span-3 append-1 last" id="site-links">
+<div class="prepend-11 span-3 append-1 last column" id="site-links">
 <%= link_to 'Sitemap', root_path %>
 <%= link_to 'Sign In', '/signin' %>
 </div>

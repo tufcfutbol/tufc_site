@@ -23,7 +23,7 @@ module PlayersHelper
     if player.rating.blank?
       return 'Player not rated'
     end
-    return 'Player Rating(1 to 10):'+player.rating
+    return 'Player Rating(1 to 10):'+player.rating.to_s
   end
 
   def first_team(player)

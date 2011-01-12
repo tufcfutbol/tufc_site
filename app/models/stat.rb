@@ -22,6 +22,7 @@ class Stat < ActiveRecord::Base
   validates :player_id, :presence => true
   validates :season, :presence => true
   validates :year, :presence => true
+  validates_inclusion_of :season, :in => %w(Fall Spring),  :message => "%{value} is not a valid season"
 
 
 

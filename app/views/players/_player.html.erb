@@ -27,10 +27,12 @@
 <% if @player.stats.empty? %>
 <h2> There are no stats to show for this player yet.</h2>
 <% else %>
-<%= render @player.stats %>
+<% @player.stats.each do |stat| %>
+<%= render stat %>
+<% end %>
 <% end %>
 </div>
 
 <hr class="space" />
-<%= link_to '(Create New Stat)', 'new_player_stat_path' %>
+<%= link_to '(Create New Stat)', new_player_stat_path(@player) %>
 

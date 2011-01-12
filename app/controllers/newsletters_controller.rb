@@ -37,9 +37,7 @@ class NewslettersController < ApplicationController
   # PUT /newsletters/1
   def update
     @newsletter = Newsletter.find(params[:id])
-    @newsletter.entry = params[:newsletter][:entry]
-    @newsletter.authored_by = params[:newsletter][:authored_by]
-
+    @newsletter.update_attributes(params[:newsletter])
     if @newsletter.save
       flash[:success] = 'Newsletter update successful.'
       redirect_to @newsletter

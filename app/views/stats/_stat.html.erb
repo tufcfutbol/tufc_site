@@ -1,0 +1,29 @@
+
+<table>
+  <tr>
+  <% if signed_in? %>
+    <td></td>
+  <% end %>
+
+    <td>Season</td>
+    <td>Goals</td>
+    <td>Assists</td>
+    <td>Yellow/Red Cards</td>
+    <td>Games Played</td>
+    <td>Eboard Position</td>
+  </tr>
+
+  <tr>
+
+    <% if signed_in? %>
+      <td><%= link_to 'Edit', edit_player_stat_path(stat.id) %>&#x9;|&#x9;<%= link_to 'Delete', player_stat_path(stat.id),:method=> :delete %></td>
+    <% end %>
+    <td><%= stat.season + ' ' + stat.year.to_s %></td>
+    <td><%= stat.goals %> </td>
+    <td> <%= stat.assists %> </td>
+    <td> <%= stat.yellow_cards %>/<%= stat.red_cards %></td>
+    <td> <%= stat.games_played %> </td>
+    <td> <%= stat.eboard_position %> </td>
+  </tr>
+</table>
+

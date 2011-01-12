@@ -16,6 +16,7 @@ class StatsController < ApplicationController
   # GET /stats/new.xml
   def new
     @stat = Stat.new
+    @player = Player.find(params[:player_id])
   end
 
   # GET /stats/1/edit

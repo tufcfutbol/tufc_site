@@ -34,6 +34,5 @@ module PlayersHelper
     end
   end
 
-
 end
 

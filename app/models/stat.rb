@@ -19,5 +19,11 @@
 class Stat < ActiveRecord::Base
   belongs_to :player
 
+  validates :player_id, :presence => true
+  validates :season, :presence => true
+  validates :year, :presence => true
+
+
+
 end
 

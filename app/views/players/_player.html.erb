@@ -20,5 +20,17 @@
 
 <hr class="space" />
 
-<h1> Stats for <%= @player.first_name + ' ' + @player.last_name%></h1>
+<h1>Stats for <%= @player.first_name + ' ' + @player.last_name %></h1>
+
+<div class="prepend-2 span-20 append-2 last" id="stat-container">
+
+<% if @player.stats.empty? %>
+<h2> There are no stats to show for this player yet.</h2>
+<% else %>
+<%= render @player.stats %>
+<% end %>
+</div>
+
+<hr class="space" />
+<%= link_to '(Create New Stat)', 'new_player_stat_path' %>
 

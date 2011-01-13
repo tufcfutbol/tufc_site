@@ -23,6 +23,7 @@ class StatsController < ApplicationController
   # GET /stats/1/edit
   def edit
     @stat = Stat.find(params[:id])
+    @player = Player.find(params[:player_id])
   end
 
   # POST /stats
@@ -42,6 +43,16 @@ class StatsController < ApplicationController
   # PUT /stats/1.xml
   def update
     @stat = Stat.find(params[:id])
+    @player = Player.find(params[:player_id])
+    @stat.update_attributes(params[:stat])
+    if @stat.save
+      flash[:success] = 'Stat successfully updated'
+      redirect_to @player
+    else
+      flash[:error] = 'Something went wrong please try again'
+      render edit_player_stat_path(@player,@stat)
+    end
+
   end
 
   # DELETE /stats/1
@@ -50,10 +61,10 @@ class StatsController < ApplicationController
     @stat = Stat.find(params[:id])
     if @stat.destroy
       flash[:success] = 'Stat successfully deleted.'
-      render Player.find(@stat.player_id)
+      redirect_to Player.find(params[:player_id])
     else
       flash[:error] = 'Something went wrong with removing this stat. Please try again.'
-      render Player.find(@stat.player_id)
+      redirect_to Player.find(params[:player_id])
     end
   end
 end

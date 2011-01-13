@@ -1,5 +1,6 @@
 <div class="prepend-8 span-8 append-8 last">
 <%= form_for @newsletter do |f| %>
+  <%= render 'shared/error_messages' %>
   <%= f.text_area :entry, :class => 'jq_watermark', :title => 'Newsletter Entry' %>
   <br />
   This box accepts <%= link_to 'Markdown', 'http://en.wikipedia.org/wiki/Markdown' %>.

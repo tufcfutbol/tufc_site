@@ -27,9 +27,23 @@
 <% if @player.stats.empty? %>
 <h2> There are no stats to show for this player yet.</h2>
 <% else %>
+<table>
+  <tr>
+  <% if signed_in? %>
+    <td></td>
+  <% end %>
+
+    <td>Season</td>
+    <td>Goals</td>
+    <td>Assists</td>
+    <td>Yellow/Red Cards</td>
+    <td>Games Played</td>
+    <td>Eboard Position</td>
+  </tr>
 <% @player.stats.each do |stat| %>
 <%= render stat %>
 <% end %>
+</table>
 <% end %>
 </div>
 

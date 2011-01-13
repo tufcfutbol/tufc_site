@@ -1,0 +1,35 @@
+<h1> Edit stat entry a new stat entry for <%= @player.first_name + ' ' + @player.last_name %> </h1>
+
+<% form_for [@player,@stat] do |f| %>
+
+<%= render 'shared/error_messages', :object => @stat %>
+
+<%= f.label :season %>
+<%= f.select :season, %w(Fall Spring) %>
+
+<%= f.number_field :year %><br />
+
+<%= f.label :goals %>
+<%= f.number_field :goals %>
+
+<%= f.label :assists %>
+<%= f.number_field :assists %><br />
+
+<%= f.label :yellow_cards %>
+<%= f.number_field :yellow_cards %>
+
+<%= f.label :red_cards %>
+<%= f.number_field :red_cards %><br />
+
+<%= f.label :games_played %>
+<%= f.number_field :games_played%><br />
+
+<%= f.label :eboard_position %>
+<%= f.text_field :eboard_position %>
+
+<hr class="space" />
+<%= f.submit 'Edit Stat Entry' %>
+
+
+<% end %>
+

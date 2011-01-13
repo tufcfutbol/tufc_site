@@ -14,7 +14,7 @@
   <%= f.label :last_name %><br />
   <%= f.text_field :last_name %><br />
   <%= f.label :year, 'Class Of' %><br />
-  <%= f.number_field :year, :value => 2012 %><br />
+  <%= f.number_field :year %><br />
   <%= f.label :email %><br />
   <%= f.text_field :email %>
   </div>
@@ -27,7 +27,7 @@
   <%= f.text_field :preffered_position %><hr class="space" />
 
   <%= f.label :rating, 'Rating(Between 1 and 10)' %><br />
-  <%= f.number_field :rating, :value => 5 %><hr class="space" />
+  <%= f.number_field :rating %><hr class="space" />
   </div>
 
   <%= f.submit %>

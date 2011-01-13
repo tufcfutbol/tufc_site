@@ -34,5 +34,13 @@ module PlayersHelper
     end
   end
 
+  def individual_preffered_position(player)
+    if player.preffered_position.blank?
+      return 'None'
+    else
+      return player.preffered_position
+    end
+  end
+
 end
 

@@ -1,0 +1,13 @@
+
+
+<!-- Continuing the table set in _playerTable.html.erb -->
+
+  <tr>
+    <% if signed_in? %>
+    <td><%= link_to 'Edit', edit_player_path(aPlayer) %>&#x9;|&#x9;<%= link_to 'Delete', player_path(aPlayer),:method=> :delete %></td>
+    <% end %>
+    <td><%= link_to header_name(aPlayer), player_path(aPlayer) %></td>
+    <td><%= hometown aPlayer %></td>
+    <td><%= individual_preffered_position aPlayer %></td>
+  </tr>
+

@@ -1,9 +1,8 @@
-<td><%= game.date.strftime('%b %d,%Y') %></td>
-<%if signed_in? %>
-<td><%= link_to game.against, game_path(game.id) %></td>
-<% else %>
-<td><%= game.against %></td>
+<% if signed_in? %>
+<td><%= link_to 'Edit', edit_game_path(game) %>&#x9;|&#x9;<%= link_to 'Delete', game_path(game), :method => :delete %></td>
 <% end %>
+<td><%= game.date.strftime('%b %d,%Y') %></td>
+<td><%= game.against %></td>
 <td><%= game.tufc_goals %></td>
 <td><%= game.against_goals %></td>
 <td><%= normalize(game.home) %></td>

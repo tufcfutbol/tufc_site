@@ -1,6 +1,6 @@
 <div id="form-inputs" class="prepend-6 span-12 append-6 last">
 <% form_for @game do |f| %>
- <%= render 'shared/error_messages' %>
+ <%= render 'shared/error_messages', :object => @game %>
  Game Date: <%= select_datetime(Time.current,:order=>[:year,:month,:day]) %><br />
  Against: <%= f.text_field :against, :title => "Against",:class =>'jq_watermark' %><br />
  TUFC Goals: <%= f.number_field :tufc_goals,:value => '1', :title => "TUFC Goals",:class =>'jq_watermark' %><br />

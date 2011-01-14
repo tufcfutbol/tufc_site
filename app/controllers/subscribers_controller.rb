@@ -14,7 +14,7 @@ class SubscribersController < ApplicationController
       flash[:success] = 'You are now on the email list'
       redirect_to root_path
     else
-      flash[:error]= 'Something went wrong, please try again.'
+      flash[:error] = extract_messages(@subscriber)
       redirect_to root_path
     end
   end
@@ -28,8 +28,22 @@ class SubscribersController < ApplicationController
       redirect_to root_path
     else
       flash[:error]= 'Your email has not been removed from the list. Please try again or contact us.'
+
       redirect_to root_path
     end
   end
+
+  private
+
+    def extract_messages(subscriber)
+      s = ''
+      subscriber.errors.full_messages.each do |message|
+        s+=' '+message
+      end
+      return s
+    end
+
+
+
 end
 

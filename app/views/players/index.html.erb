@@ -8,42 +8,46 @@
   });
 </script>
 
+<%= stylesheet_link_tag 'custom/playerIndex', :media => 'screen' %>
 
 </head>
 
 <h1>Current Rosters </h1>
 
-<div id="tab-container" class="prepend-2 span-20 append-2 last">
+<div class="prepend-1 span-22 append-1 last">
 
+  <div id="tab-container" class="span-22">
 
-  <ul>
-    <li><a href="#a-team-div">A Team</a></li>
-    <li><a href="#b-team-div">B Team</a></li>
-    <li><a href="#full-roster-div">Full Roster</a></li>
-    <li><a href="#legends-div">Legends</a></li>
-  </ul>
+    <ul class="">
+      <li><a href="#a-team-div">A Team</a></li>
+      <li><a href="#b-team-div">B Team</a></li>
+      <li><a href="#full-roster-div">Full Roster</a></li>
+      <li><a href="#legends-div">Legends</a></li>
+      <br style="clear:both;" />
+    </ul>
 
-  <div id="a-team-div">
-    <%= render 'playerTable' %>
-    <%= render 'aTeam' %>
-    </table>
-  </div>
-    <div id="b-team-div">
+  <div class="prepend-2 panel-container">
+    <div id="a-team-div" class="prepend-3">
+      <%= render 'playerTable' %>
+      <%= render 'aTeam' %>
+      </table>
+    </div>
+    <div id="b-team-div" class="prepend-3">
     <%= render 'playerTable' %>
     <%= render 'bTeam' %>
     </table>
+     </div>
+    <div id="full-roster-div" class="prepend-3">
+      <%= render 'playerTable' %>
+      <%= render 'fullRoster' %>
+      </table>
+    </div>
+    <div id="legends-div" class="prepend-3">
+      <%= render 'playerTable' %>
+      <%= render 'legends' %>
+      </table>
+    </div>
   </div>
-  <div id="full-roster-div">
-    <%= render 'playerTable' %>
-    <%= render 'fullRoster' %>
-    </table>
-  </div>
-  <div id="legends-div">
-    <%= render 'playerTable' %>
-    <%= render 'legends' %>
-    </table>
-  </div>
-
-
+</div>
 </div>
 

@@ -1,3 +1,4 @@
+<h1>Games</h1>
 <% if @games.size == 0 %>
 <div class="prepend-9 span-6 append-9 last">
 Sorry, there are no recent games to show!
@@ -19,11 +20,12 @@ Sorry, there are no recent games to show!
 <td><b>Result</b></td>
 </tr>
 <% @games.each do |game| %>
+<tr>
 <%= render 'game', :game => game %>
 <% end %>
 </tr>
 </table>
-<div class="prepend-6 span-7" id="paginate-information">
+<div class="prepend-10 span-7" id="paginate-information">
 <hr class="space" />
 <hr class="space" />
 <%= will_paginate @games %>

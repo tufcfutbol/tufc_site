@@ -15,5 +15,11 @@
 #
 
 class Game < ActiveRecord::Base
+
+  validates_presence_of :date
+  validates_presence_of :against
+
+  default_scope :order => 'games.date DESC'
+
 end
 

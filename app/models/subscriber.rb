@@ -9,5 +9,8 @@
 #
 
 class Subscriber < ActiveRecord::Base
+
+  validates :email, :presence => true, :format => {:with => /^([^\s]+)((?:[-a-z0-9]\.)[a-z]{2,})$/i}, :uniqueness => {:case_sensitive => false}
+
 end
 

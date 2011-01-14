@@ -1,0 +1,54 @@
+<head>
+<%= stylesheet_link_tag 'custom/home' , :media => 'screen' %>
+</head>
+
+<div class="prepend-2 span-20 append-2 last" id="picture-container">
+  <div class="span-20" id="picture">
+    This is where the picture will be.
+  </div>
+</div>
+
+<hr class="space" />
+
+
+<div class="prepend-1 span-5 append-1" id="song-container">
+   <p id="song-header">TUFC Anthem</p>
+    <p class="quiet">
+      Guts and glory don't dispare,<br />
+      Kick the ball up in the air,<br />
+      On the pitch or in the pub,<br />
+      Who are we?<br />
+      Tufts CLUB CLUB CLUB!!!
+    </p>
+</div>
+
+
+<div class="prepend-1 span-6 append-1" id="subscriber-container">
+  <p><b> Sign up to receive new TUFC newsletters!</b> </p>
+  <% form_for(:subscriber, :url => subscribers_path) do |f| %>
+    <%= render 'shared/error_messages', :object => @subscriber %>
+    <%= f.email_field :email , :class=>'jq_watermark', :title => 'Enter your e-mail here to subscribe' %>
+    <%= f.submit 'Subscribe' %>
+  <% end %>
+</div>
+
+<div class="prepend-1 span-7 append-1 last" id="recent-games-container">
+  <p><b>Recent Games</b></p>
+  <table>
+    <tr>
+      <td>Date</td>
+      <td>Against</td>
+      <td>Score</td>
+      <td>Result</td>
+    </tr>
+    <% @recent_games.each do |game| %>
+      <tr>
+        <td><%= game.date.strftime('%b %d,%Y') %></td>
+        <td><%= game.against %></td>
+        <td><%= game.tufc_goals %>/<%= game.against_goals %></td>
+        <td><%= win_or_loss(game) %></td>
+      </tr>
+   <% end %>
+  </table>
+</div>
+

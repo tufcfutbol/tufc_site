@@ -1,10 +1,10 @@
 #tab-container { border: solid 1px; height: 300px; }
-			#tab-container ul { height: 300px; list-style: none; margin: 0; padding: 0; background: #ccc; float: left; border-right: solid 1px; }
-			#tab-container ul li { width: 100px; margin: 0; padding: 0; text-align: center; }
-			#tab-container ul li a { display: block; padding: 15px 0; outline: none; }
-			#tab-container ul li a:hover { text-decoration: underline; }
-			#tab-container ul li.selected-tab { background: #fff; position: relative; left: 1px; border-style: solid; border-width: 1px 0; }
-			#tab-container ul li:first-child.selected-tab { border-top: none; }
-			#tab-container ul li a.selected-tab { font-weight: bold; text-decoration: none; }
-			#tab-container .panel-container { padding-top: 5px; padding-left: 120px; }
+#tab-container ul { height: 300px; list-style: none; margin: 0; padding: 0; background: #ccc; float: left; border-right: solid 1px; }
+#tab-container ul li { width: 100px; margin: 0; padding: 0; text-align: center; }
+#tab-container ul li a { display: block; padding: 15px 0; outline: none; }
+#tab-container ul li a:hover { text-decoration: underline; }
+#tab-container ul li.selected-tab { background: #fff; position: relative; left: 1px; border-style: solid; border-width: 1px 0; }
+#tab-container ul li:first-child.selected-tab { border-top: none; }
+#tab-container ul li a.selected-tab { font-weight: bold; text-decoration: none; }
+#tab-container .panel-container { padding-top: 5px; padding-left: 120px; }
 

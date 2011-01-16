@@ -42,5 +42,13 @@ module PlayersHelper
     end
   end
 
+  def team(player)
+    if player.first_team
+      return 'A'
+    else
+      return 'B'
+    end
+  end
+
 end
 

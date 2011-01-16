@@ -24,6 +24,9 @@ class Player < ActiveRecord::Base
   validates :email, :presence => true, :format => {:with => /^([^\s]+)((?:[-a-z0-9]\.)[a-z]{2,})$/i}, :uniqueness => {:case_sensitive => false}
   validates :year, :presence => true
   validates_numericality_of :year, :greater_than => 1950, :less_than => 2100
+  validates_numericality_of :rating, :greater_than => 0, :less_than => 11
+
+  default_scope :order => 'last_name'
 
 
 

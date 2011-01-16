@@ -13,6 +13,7 @@ gem 'bluecloth'
 gem 'will_paginate'
 gem 'sitemap_generator'
 gem 'whenever', :require => false
+gem 'httparty'
 # Use unicorn as the web server
 # gem 'unicorn'
 

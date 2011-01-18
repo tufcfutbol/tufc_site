@@ -5,3 +5,9 @@ Please contact me before using any of the code in this application, as it is cop
 Thanks,
 hwrd
 
+
+You can view the website at two locations:
+
+http://www.tufcvenom.com(Production)
+http://www.deep-galaxy-437.heroku.com(Test)
+

@@ -32,6 +32,11 @@ class StatsController < ApplicationController
     params[:stat][:player_id] = params[:player_id]
     @stat = Stat.new(params[:stat])
     @player = Player.find(params[:player_id])
+    if !check_stat_period(@stat) #if this is false then the season is outside the editing period
+      flash[:notice] = 'You can only create a stat within a season. You have tried to create a stat outside the available editing period.'
+      render 'new'
+      return
+    end
     if @stat.save
       redirect_to [@player,@stat], :flash => {:success => 'Stat creation successful'}
     else
@@ -44,7 +49,7 @@ class StatsController < ApplicationController
   def update
     @stat = Stat.find(params[:id])
     @player = Player.find(params[:player_id])
-    if !check_stat_editing_period(@stat) #if this is false then the season is outside the editing period
+    if !check_stat_period(@stat) #if this is false then the season is outside the editing period
       flash[:notice] = 'You can only edit a stat within a season. You have tried to edit a stat outside the available editing period.'
       redirect_to @player
       return
@@ -80,7 +85,7 @@ class StatsController < ApplicationController
   #Currently the editing periods are as follows:
   #Fall Editing Period -- Months 8-12
   #Spring Editing Period -- Months 2-6
-  def check_stat_editing_period(stat)
+  def check_stat_period(stat)
     if stat.season == 'Fall'
       return Time.now.month > 8 && Time.now.month < 12
     end

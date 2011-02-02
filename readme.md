@@ -11,3 +11,11 @@ You can view the website at two locations:
 http://www.tufcvenom.com(Production)
 http://www.deep-galaxy-437.heroku.com(Test)
 
+
+TODO:
+Goalkeepers
+Pictures
+Stats Model Change
+Venom Cup Tab
+Background Image/Logo Image
+

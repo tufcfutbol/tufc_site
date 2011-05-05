@@ -12,7 +12,7 @@ module PagesHelper
 
     (1..number).each do |i|
       #add pictures to arrayArray
-      num = Random.rand(0...size)
+      num = rand(0...size)
       picturesArray.push(tufcBucket[num])
     end
 

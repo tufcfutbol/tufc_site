@@ -9,11 +9,10 @@ module PagesHelper
     tufcBucket = AWS::S3::Bucket.objects('tufcPictures')
     size = tufcBucket.size
     picturesArray = Array.new
-    random = Random.new
 
     (1..number).each do |i|
       #add pictures to arrayArray
-      num = random.rand(0...size)
+      num = Random.rand(0...size)
       picturesArray.push(tufcBucket[num])
     end
 

@@ -14,7 +14,6 @@ gem 'will_paginate'
 gem 'sitemap_generator'
 gem 'whenever', :require => false
 gem 'httparty'
-gem 'fog'
 gem 'aws-s3'
 # Use unicorn as the web server
 # gem 'unicorn'

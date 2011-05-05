@@ -1,7 +1,19 @@
 <head>
 
 <%= stylesheet_link_tag 'custom/about', :media => 'screen' %>
-
+<%= javascript_include_tag 'slides.min.jquery.js' %>
+<script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+<script>
+  $(function(){
+    $("#slides").slides({
+    play: 5000,
+    preload: false,
+    hoverPause: true,
+    pagination: false,
+    generatePagination: false
+    });
+  });
+</script>
 </head>
 
 <h1> About TUFC </h1>
@@ -12,17 +24,13 @@ Nunc euismod mi eu nibh tristique nec faucibus lectus molestie. Integer vitae ni
 </blockquote>
 
 
-<div id="gallery-selected-picture-container" class="prepend-2 span-20 append-2 last">
-  <div class="span-20" id="selected-picture">
-    This is the selected picture container.
-  </div>
-</div>
-
-<hr class="space" />
-
-<div id="secondary-pictures-conatiner" class="prepend-1 span-22 append-1 last">
-  <div class="span-22" id="secondary-pictures">
-    This is where all the other pictures will go.
+  <div class="span-24 last" id="picture-container">
+  <div id="slides">
+    <div class="slides_container">
+      <% @pictures.size.times do |index| %>
+        <%= image_tag(@pictures[index].url(:expires_in => 60*60*3), :size =>'950x410') %>
+      <% end %>
+    </div>
   </div>
 </div>
 

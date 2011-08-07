@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   end
 
   def about
-     @pictures = getPictures(50)
+     @pictures = getPictures(25)
   end
 
   def construction

@@ -5,9 +5,7 @@
  Against: <%= f.text_field :against, :title => "Against",:class =>'jq_watermark' %><br />
  TUFC Goals: <%= f.number_field :tufc_goals,:value => '1', :title => "TUFC Goals",:class =>'jq_watermark' %><br />
  Against Goals: <%= f.number_field :against_goals,:value =>'0', :title => "Against Goals",:class =>'jq_watermark' %><br />
- Home Game? <%= f.check_box :home, :label => 'Home' %><br />
  League Game? <%= f.check_box :league_game, :title => "Against",:class =>'jq_watermark' %><br />
- Playoff Game? <%= f.check_box :playoff_game, :title => "Against",:class =>'jq_watermark' %><br />
  <hr class="space" />
  <%= f.submit 'Create Game' %>
 <% end %>

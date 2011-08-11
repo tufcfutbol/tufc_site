@@ -10,16 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110111192614) do
+ActiveRecord::Schema.define(:version => 20110810224710) do
 
   create_table "games", :force => true do |t|
     t.datetime "date"
     t.string   "against"
     t.integer  "tufc_goals"
     t.integer  "against_goals"
-    t.boolean  "home"
     t.boolean  "league_game"
-    t.boolean  "playoff_game"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

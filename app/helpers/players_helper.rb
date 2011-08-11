@@ -16,14 +16,14 @@ module PlayersHelper
     if player.preffered_position.blank?
       return 'No preffered position'
     end
-    return 'Preffered Position(s):'+player.preffered_position
+    return 'Position(s): '+player.preffered_position
   end
 
   def rating(player)
     if player.rating.blank?
       return 'Player not rated'
     end
-    return 'Player Rating(1 to 10):'+player.rating.to_s
+    return 'Player Rating(1 to 10): '+player.rating.to_s
   end
 
   def first_team(player)

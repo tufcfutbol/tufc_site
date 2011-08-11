@@ -62,7 +62,7 @@
       <tr>
         <td><%= game.date.strftime('%b %d,%Y') %></td>
         <td><%= game.against %></td>
-        <td><%= game.tufc_goals %>/<%= game.against_goals %></td>
+        <td><%= game.tufc_goals %> - <%= game.against_goals %></td>
         <td><%= win_or_loss(game) %></td>
       </tr>
    <% end %>

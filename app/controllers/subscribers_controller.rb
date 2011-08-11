@@ -6,6 +6,10 @@ class SubscribersController < ApplicationController
     @subscriber = Subscriber.new
   end
 
+  def index
+    @subscribers = Subscriber.all
+  end
+
   # POST /subscribers
   # POST /subscribers.xml
   def create

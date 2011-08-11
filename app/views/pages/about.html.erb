@@ -2,6 +2,7 @@
 
 <%= stylesheet_link_tag 'custom/about', :media => 'screen' %>
 <%= javascript_include_tag 'slides.min.jquery.js' %>
+<%= javascript_include_tag 'jail.js' %>
 <script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
 <script>
   $(function(){
@@ -12,6 +13,8 @@
     pagination: false,
     generatePagination: false
     });
+
+     $('img.lazy').jail();
   });
 </script>
 </head>

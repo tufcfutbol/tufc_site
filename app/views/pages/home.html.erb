@@ -1,6 +1,7 @@
 <head>
 <%= stylesheet_link_tag 'custom/home' , :media => 'screen' %>
 <%= javascript_include_tag 'slides.min.jquery.js' %>
+<%= javascript_include_tag 'jail.js' %>
 <script src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
 <script>
   $(function(){
@@ -11,7 +12,11 @@
     pagination: false,
     generatePagination: false
     });
-  });
+
+    $('img.lazy').jail();
+
+   });
+
 </script>
 </head>
 
@@ -19,7 +24,7 @@
   <div id="slides">
     <div class="slides_container">
       <% @pictures.size.times do |index| %>
-        <%= image_tag(@pictures[index].url(:expires_in => 60*60*3), :size =>'950x410') %>
+        <%= image_tag(@pictures[index].url(:expires_in => 60*60*3), :size =>'950x410', :class => 'lazy') %>
       <% end %>
     </div>
   </div>
